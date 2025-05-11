@@ -2,16 +2,21 @@
 /**
  * @package    triumf38
  *
- * @author     matt <your@email.com>
+ * @author     Greenkey <info@greenkey.ru>
+ * @developer   Greenkey studio
  * @copyright  A copyright
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
- * @link       http://your.url.com
+ * @link       http://triumf40.ru
  */
 
 defined('_JEXEC') or die;
 
 use \Joomla\CMS\Factory;
 use \Joomla\CMS\Language\Text;
+
+JHtml::_('jquery.framework');
+JHtml::_('jquery.ui');
+JHtml::_('behavior.framework');
 
 require_once JPATH_THEMES . '/' . $this->template . '/helper.php';
 

@@ -9,3 +9,14 @@
  */
 
 defined('_JEXEC') or die;
+
+if (($this->error->getCode()) == '404') {
+    header('Location: /index.php?option=com_content&view=article&id=54');
+    exit;
+}
+
+if (!isset($this->error))
+{
+    $this->error = JError::raiseWarning(404, JText::_('JERROR_ALERTNOAUTHOR'));
+    $this->debug = false;
+}
