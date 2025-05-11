@@ -1,26 +1,27 @@
 <?php
 /**
- * @package    triumf38
+ * @package    triumf
  *
- * @author     matt <your@email.com>
+ * @author     Greenkey <info@greenkey.ru>
+ * @developer   Greenkey studio
  * @copyright  A copyright
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
- * @link       http://your.url.com
+ * @link       http://triumf40.ru
  */
 
 defined('_JEXEC') or die;
 
-use \Joomla\CMS\Factory;
-use \Joomla\CMS\HTML\HTMLHelper;
-use \Joomla\CMS\Uri\Uri;
+use Joomla\CMS\Factory;
+use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\CMS\Uri\Uri;
 
 /**
- * Triumf38 template helper.
+ * Triumf template helper.
  *
- * @package  triumf38
+ * @package  triumf
  * @since    1.0
  */
-class tplTriumf38Helper
+class tplTriumfHelper
 {
 	static public function template()
 	{
@@ -197,11 +198,11 @@ class tplTriumf38Helper
 	 */
 	static public function setGenerator($generator)
 	{
-		Factory::getDocument()->setGenerator($generator);
+		Factory::getApplication()->getDocument()->setGenerator($generator);
 	}
 
 	/**
-	 * Method to get the current sitename
+	 * Method to get the current site name
 	 *
 	 * @access public
 	 *
@@ -212,7 +213,7 @@ class tplTriumf38Helper
 	 */
 	static public function getSitename()
 	{
-		return Factory::getConfig()->get('sitename');
+		return Factory::getApplication()->getConfig()->get('sitename');
 	}
 
 	/**
@@ -232,7 +233,7 @@ class tplTriumf38Helper
 		$doc->setHtml5(true);
 		$doc->setMetaData('X-UA-Compatible', 'IE=edge', true);
 		$doc->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
-		//self::setGenerator(self::getSitename());
+		self::setGenerator(self::getSitename());
 	}
 
 	/**
@@ -283,7 +284,7 @@ class tplTriumf38Helper
 	 */
 	static public function setAnalytics($analyticsType = null, $analyticsId = null)
 	{
-		$doc        = Factory::getDocument();
+		$doc        = Factory::getApplication()->getDocument();
 		$bodyScript = '';
 
 		if (!$analyticsType)

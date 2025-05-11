@@ -1,10 +1,12 @@
 <?php
 /**
- * @package     Joomla.Site
- * @subpackage  mod_articles_news
+ * @package    triumf
  *
- * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @author     Greenkey <info@greenkey.ru>
+ * @developer   Greenkey studio
+ * @copyright  A copyright
+ * @license    GNU General Public License version 2 or later; see LICENSE.txt
+ * @link       http://triumf40.ru
  */
 
 defined('_JEXEC') or die;

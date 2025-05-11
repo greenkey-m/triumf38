@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="template" version="3.8" client="site" method="upgrade">
-    <name>Triumf38</name>
-    <version>3.8</version>
-    <creationDate>17.09.2018</creationDate>
+<extension type="template" version="5.0" client="site" method="upgrade">
+    <name>Triumf template</name>
+    <version>5.0</version>
+    <creationDate>10.05.2025</creationDate>
     <author>matt</author>
     <authorEmail>info@greenkey.ru</authorEmail>
     <copyright>All rights reserved</copyright>
-    <description>TPL_TRIUMF38_XML_DESCRIPTION</description>
+    <description>TPL_TRIUMF_XML_DESCRIPTION</description>
 
     <files>
         <filename>component.php</filename>
@@ -53,23 +53,23 @@
         <fields name="params">
             <fieldset name="advanced">
                 <field name="templateColor" class="" type="color" default="#08C"
-                       label="TPL_TRIUMF38_COLOR_LABEL"
-                       description="TPL_TRIUMF38_COLOR_DESC"/>
+                       label="TPL_TRIUMF_COLOR_LABEL"
+                       description="TPL_TRIUMF_COLOR_DESC"/>
 
                 <field name="templateBackgroundColor" class="" type="color" default="#F4F6F7"
-                       label="TPL_TRIUMF38_BACKGROUND_COLOR_LABEL"
-                       description="TPL_TRIUMF38_BACKGROUND_COLOR_DESC"/>
+                       label="TPL_TRIUMF_BACKGROUND_COLOR_LABEL"
+                       description="TPL_TRIUMF_BACKGROUND_COLOR_DESC"/>
 
                 <field name="logoFile" class="" type="media" default=""
-                       label="TPL_TRIUMF38_LOGO_LABEL"
-                       description="TPL_TRIUMF38_LOGO_DESC"/>
+                       label="TPL_TRIUMF_LOGO_LABEL"
+                       description="TPL_TRIUMF_LOGO_DESC"/>
 
-                <field name="sitetitle" type="text" default=""
+                <field name="siteTitle" type="text" default=""
                        label="JGLOBAL_TITLE"
                        description="JFIELD_ALT_PAGE_TITLE_LABEL"
                        filter="string"/>
 
-                <field name="sitedescription" type="text" default=""
+                <field name="siteDescription" type="text" default=""
                        label="JGLOBAL_DESCRIPTION"
                        description="JGLOBAL_SUBHEADING_DESC"
                        filter="string"/>
@@ -78,26 +78,26 @@
                        type="radio"
                        class="btn-group"
                        default="1"
-                       label="TPL_TRIUMF38_FONT_LABEL"
-                       description="TPL_TRIUMF38_FONT_DESC"
+                       label="TPL_TRIUMF_FONT_LABEL"
+                       description="TPL_TRIUMF_FONT_DESC"
                 >
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
 
                 <field name="googleFontName" class="" type="text" default="Open+Sans"
-                       label="TPL_TRIUMF38_FONT_NAME_LABEL"
-                       description="TPL_TRIUMF38_FONT_NAME_DESC"/>
+                       label="TPL_TRIUMF_FONT_NAME_LABEL"
+                       description="TPL_TRIUMF_FONT_NAME_DESC"/>
 
                 <field name="fluidContainer"
                        type="radio"
                        class="btn-group"
                        default="0"
-                       label="TPL_TRIUMF38_FLUID_LABEL"
-                       description="TPL_TRIUMF38_FLUID_DESC"
+                       label="TPL_TRIUMF_FLUID_LABEL"
+                       description="TPL_TRIUMF_FLUID_DESC"
                 >
-                    <option value="0">TPL_TRIUMF38_STATIC</option>
-                    <option value="1">TPL_TRIUMF38_FLUID</option>
+                    <option value="0">TPL_TRIUMF_STATIC</option>
+                    <option value="1">TPL_TRIUMF_FLUID</option>
                 </field>
             </fieldset>
         </fields>

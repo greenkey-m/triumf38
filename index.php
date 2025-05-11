@@ -1,6 +1,6 @@
 <?php
 /**
- * @package    triumf38
+ * @package    triumf
  *
  * @author     Greenkey <info@greenkey.ru>
  * @developer   Greenkey studio
@@ -11,29 +11,23 @@
 
 defined('_JEXEC') or die;
 
-use \Joomla\CMS\Factory;
 use \Joomla\CMS\Language\Text;
-
-JHtml::_('jquery.framework');
-JHtml::_('jquery.ui');
-JHtml::_('behavior.framework');
 
 require_once JPATH_THEMES . '/' . $this->template . '/helper.php';
 
-tplTriumf38Helper::loadCss();
-tplTriumf38Helper::loadJs();
-tplTriumf38Helper::setMetadata();
-
+tplTriumfHelper::loadCss();
+tplTriumfHelper::loadJs();
+tplTriumfHelper::setMetadata();
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<jdoc:include type="head" />
 </head>
-<body class="<?php echo tplTriumf38Helper::setBodySuffix(); ?>">
-<?php echo tplTriumf38Helper::setAnalytics(0, 'your-analytics-id'); ?>
+<body class="<?php echo tplTriumfHelper::setBodySuffix(); ?>">
+<?php echo tplTriumfHelper::setAnalytics(0, 'your-analytics-id'); ?>
 
-<a href="#main" class="sr-only sr-only-focusable"><?php echo Text::_('TPL_TRIUMF38_SKIP_LINK_LABEL'); ?></a>
+<a href="#main" class="sr-only sr-only-focusable"><?php echo Text::_('TPL_TRIUMF_SKIP_LINK_LABEL'); ?></a>
 
 <a href="<?php echo $this->baseurl; ?>/">
     <?php if ($this->params->get('sitedescription')) : ?>
@@ -56,12 +50,20 @@ tplTriumf38Helper::setMetadata();
 	<?php endif; ?>
 </aside>
 
-<triumf38ter>
-	<jdoc:include type="modules" name="triumf38ter" style="none" />
+<triumf-ter>
+	<jdoc:include type="modules" name="triumf-ter" style="none" />
 	<p>
-		&copy; <?php echo date('Y'); ?> <?php echo tplTriumf38Helper::getSitename(); ?>
+		&copy; <?php echo date('Y'); ?> <?php echo tplTriumfHelper::getSitename(); ?>
 	</p>
-</triumf38ter>
+</triumf-ter>
+
+<footer>
+    <jdoc:include type="modules" name="footer" style="none" />
+    <p>
+        &copy; <?php echo date('Y'); ?> <?php echo tplTriumfHelper::getSitename(); ?>
+    </p>
+</footer>
+
 <jdoc:include type="modules" name="debug" style="none" />
 </body>
 </html>
